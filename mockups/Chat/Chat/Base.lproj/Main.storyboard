@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Profile Navigation Controller-->
+        <scene sceneID="sUo-2a-fLC">
+            <objects>
+                <navigationController title="Profile Navigation Controller" id="IoH-ac-bzb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profil" image="first" id="MJB-f2-bgY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ELs-XV-94b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="iVD-sp-By3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSo-yU-SdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-335.625" y="26.408450704225352"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController title="Profile" id="9pv-A4-QxB" customClass="ProfileViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7EA-Qp-rGe"/>
+                        <viewControllerLayoutGuide type="bottom" id="5An-gQ-02O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benutzerprofil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkg-za-vCq">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Xkg-za-vCq" secondAttribute="centerX" id="Pb6-Ev-exL"/>
+                            <constraint firstAttribute="centerY" secondItem="Xkg-za-vCq" secondAttribute="centerY" constant="0.5" id="nSJ-QZ-4eT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Xkg-za-vCq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Pb6-Ev-exL"/>
+                                <exclude reference="nSJ-QZ-4eT"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Xkg-za-vCq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Pb6-Ev-exL"/>
+                                <include reference="nSJ-QZ-4eT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profil" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="Profil" id="xuX-r7-Njh">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="6Kz-TU-xN1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g2X-pf-3pG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Einstellungen"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="kjT-ix-Nph" kind="show" id="67q-le-dfD"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="26"/>
+        </scene>
+        <!--Profile Settings-->
+        <scene sceneID="qX3-He-5ca">
+            <objects>
+                <viewController title="Profile Settings" hidesBottomBarWhenPushed="YES" id="kjT-ix-Nph" customClass="ProfileSettingsViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ykA-iI-bKd"/>
+                        <viewControllerLayoutGuide type="bottom" id="6x7-pp-x9H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WF9-pg-ACS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="überlegen was man einstellen darf/kann" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUE-Ew-O6k">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="SUE-Ew-O6k" secondAttribute="centerY" constant="0.5" id="QTY-3I-pPi"/>
+                            <constraint firstAttribute="centerX" secondItem="SUE-Ew-O6k" secondAttribute="centerX" constant="-0.5" id="hPH-lw-DF6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="SUE-Ew-O6k"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QTY-3I-pPi"/>
+                                <exclude reference="hPH-lw-DF6"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="SUE-Ew-O6k"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QTY-3I-pPi"/>
+                                <include reference="hPH-lw-DF6"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profileinstellungen" id="WER-E8-Iv3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CL6-JF-dNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315.5" y="26"/>
+        </scene>
+        <!--Browser Navigation Controller-->
+        <scene sceneID="FCp-pW-B4i">
+            <objects>
+                <navigationController title="Browser Navigation Controller" id="TZa-Pn-gLk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browser" image="first" id="wXm-ny-74e"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JkC-NW-417">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="kit-WD-g9C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xR-9h-TRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46.875" y="-728.87323943661943"/>
+        </scene>
+        <!--Browser-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController title="Browser" id="8rJ-Kc-sve" customClass="BrowserViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zx5-0V-m2e"/>
+                        <viewControllerLayoutGuide type="bottom" id="uOG-yn-1bp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zeigt alle gefundene Peers an" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoI-5a-gH4">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5o-DC-aOa" userLabel="scrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="NoI-5a-gH4" secondAttribute="centerX" id="PFN-z9-Cw1"/>
+                            <constraint firstAttribute="centerY" secondItem="NoI-5a-gH4" secondAttribute="centerY" constant="0.5" id="Ug4-Ut-K06"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="NoI-5a-gH4"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="PFN-z9-Cw1"/>
+                                <exclude reference="Ug4-Ut-K06"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="NoI-5a-gH4"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="PFN-z9-Cw1"/>
+                                <include reference="Ug4-Ut-K06"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Browser" image="first" selectedImage="first" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="Browser" id="ymu-ci-zHJ">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="W0K-dn-A47">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u5g-MI-uMg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Einstellungen">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9da-k4-DZz" kind="show" id="nQh-Co-fwn"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="-719"/>
+        </scene>
+        <!--Browsereinstellungen-->
+        <scene sceneID="fhf-62-Fgf">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="9da-k4-DZz" customClass="BrowserSettingsViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vte-c9-aUX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qwr-HC-yxG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LJJ-Qk-27m">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="überlegen was man einstellen darf/kann" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEx-Fy-PKO">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="iEx-Fy-PKO" secondAttribute="centerX" constant="-0.5" id="lOe-wH-XSd"/>
+                            <constraint firstAttribute="centerY" secondItem="iEx-Fy-PKO" secondAttribute="centerY" constant="0.5" id="yaT-0m-Fhy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="iEx-Fy-PKO"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="lOe-wH-XSd"/>
+                                <exclude reference="yaT-0m-Fhy"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="iEx-Fy-PKO"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="lOe-wH-XSd"/>
+                                <include reference="yaT-0m-Fhy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Browsereinstellungen" id="lKj-rK-o3c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFs-58-foz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1747.5" y="-729"/>
+        </scene>
+        <!--Chats Navigation Controller-->
+        <scene sceneID="b7m-jr-BRU">
+            <objects>
+                <navigationController title="Chats Navigation Controller" id="5CW-3m-Rfj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chats" image="first" id="Bz2-nZ-CQ4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="haN-fi-bWD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BRR-fo-EfG" kind="relationship" relationship="rootViewController" id="9t0-b7-NFl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fVk-ve-jOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-883.125" y="754.22535211267575"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="C9Y-h0-DmP">
+            <objects>
+                <viewController title="Chats" id="BRR-fo-EfG" customClass="ChatsViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6IX-Oy-Lng"/>
+                        <viewControllerLayoutGuide type="bottom" id="01W-7s-GSK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gAJ-U5-OIK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byc-AW-iqe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Chat öffnen">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3ki-oL-7YX" kind="show" id="err-G1-1WQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="byc-AW-iqe" secondAttribute="centerX" id="hPv-sq-0Cg"/>
+                            <constraint firstAttribute="centerY" secondItem="byc-AW-iqe" secondAttribute="centerY" id="w4u-tp-3qj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="byc-AW-iqe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="hPv-sq-0Cg"/>
+                                <exclude reference="w4u-tp-3qj"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="byc-AW-iqe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="hPv-sq-0Cg"/>
+                                <include reference="w4u-tp-3qj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chats" id="YNr-Hj-b0k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cs3-ia-ecu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="754.22535211267575"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="VJb-A8-wWF">
+            <objects>
+                <viewController title="Messages" hidesBottomBarWhenPushed="YES" id="3ki-oL-7YX" customClass="MessagesViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hpd-qh-HOG"/>
+                        <viewControllerLayoutGuide type="bottom" id="ufe-Yh-d71"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1wZ-AC-KsY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nachrichten von beiden Chatpartnern" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHD-Mv-ZvQ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="NHD-Mv-ZvQ" secondAttribute="centerY" id="TjK-mw-g6z"/>
+                            <constraint firstAttribute="centerX" secondItem="NHD-Mv-ZvQ" secondAttribute="centerX" constant="-0.5" id="edx-8A-uAF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="NHD-Mv-ZvQ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="TjK-mw-g6z"/>
+                                <exclude reference="edx-8A-uAF"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="NHD-Mv-ZvQ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="TjK-mw-g6z"/>
+                                <include reference="edx-8A-uAF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" title="Nachrichten" id="Pnb-sl-IaQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kh8-Tj-8NM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817.5" y="754.22535211267575"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zG1-8a-TTT"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IoH-ac-bzb" kind="relationship" relationship="viewControllers" id="kQ5-K4-GW9"/>
+                        <segue destination="TZa-Pn-gLk" kind="relationship" relationship="viewControllers" id="TCh-Mz-awx"/>
+                        <segue destination="5CW-3m-Rfj" kind="relationship" relationship="viewControllers" id="fM5-Vj-QvB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-883.125" y="-728.87323943661943"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
+</document>
